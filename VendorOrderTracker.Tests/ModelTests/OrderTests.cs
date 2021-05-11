@@ -14,5 +14,14 @@ namespace VendorOrderTracker.Tests
       Order NewOrder = new Order();
       Assert.AreEqual(typeof(Order), NewOrder.GetType());
     }
+    [TestMethod]
+    public void
+    GetTitle_ReturnsTitle_String()
+    {
+      string title = "CRI Regular";
+      Order newOrder = new Order(title);
+      string result = newOrder.Title;
+      Assert.AreEqual(title, result);
+    }
   }
 }
