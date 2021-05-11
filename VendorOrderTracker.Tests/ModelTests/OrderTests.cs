@@ -11,7 +11,7 @@ namespace VendorOrderTracker.Tests
     [TestMethod]
     public void OrderCustructor_CreatesInstanceOfOrder_Order()
     {
-      Order NewOrder = new Order();
+      Order NewOrder = new Order("test");
       Assert.AreEqual(typeof(Order), NewOrder.GetType());
     }
     [TestMethod]
