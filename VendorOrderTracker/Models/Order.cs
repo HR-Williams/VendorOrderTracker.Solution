@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace VendorOrderTracker.Models
 {
@@ -9,11 +10,14 @@ namespace VendorOrderTracker.Models
     public string Description { get; }
 
     public int Price { get; }
-    public Order(string title, string description, int price)
+
+    public DateTime Date { get; }
+    public Order(string title, string description, int price, DateTime date)
     {
       Title = title;
       Description = description;
       Price = price;
+      Date = DateTime.Today;
     }
   }
 }
