@@ -56,18 +56,18 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(price, result);
     }
 
-    // [TestMethod]
-    // public void
-    // GetDate_ReturnsDate_Date()
-    // {
-    //   string title = "CRI Regular";
-    //   string description =
-    //   "10 pastries";
-    //   int price = 17;
-    //   DateTime date = 5/10/2021;
-    //   Order newOrder= new Order(title, description, price, date);
-    //   int result = newOrder.Date;
-    //   Assert.AreEqual(date, result);
-    // }
+    [TestMethod]
+    public void
+    GetDate_ReturnsDate_Date()
+    {
+      string title = "CRI Regular";
+      string description =
+      "10 pastries";
+      int price = 17;
+      DateTime date = DateTime.Today;
+      Order newOrder= new Order(title, description, price, date);
+      DateTime result = newOrder.Date;
+      Assert.AreEqual(date, result);
+    }
   }
 }
