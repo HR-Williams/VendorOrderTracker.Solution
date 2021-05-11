@@ -46,5 +46,21 @@ namespace VendorOrderTracker.Tests
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsVendors_VendorsList()
+    {
+      string name01 = "Suzie's Cafe";
+      string name02 = "Coffee Research Institute";
+      string description01 = "local cafe";
+      string description02 = "weird coffee shop";
+      Vendor newVendor1 = new Vendor(name01, description01);
+      Vendor newVendor2 = new Vendor(name02, description02);
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
+      
+      List<Vendor> result = Vendor.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
   }
