@@ -11,7 +11,7 @@ namespace VendorOrderTracker.Tests
     [TestMethod]
     public void OrderCustructor_CreatesInstanceOfOrder_Order()
     {
-      Order NewOrder = new Order("test", "test description", 99);
+      Order NewOrder = new Order("test", "test description", 99, 5/10/2021);
       Assert.AreEqual(typeof(Order), NewOrder.GetType());
     }
     [TestMethod]
@@ -22,7 +22,8 @@ namespace VendorOrderTracker.Tests
       string description =
       "10 pastries";
       int price = 17;
-      Order newOrder = new Order(title, description, price);
+      date date = 5/10/2021;
+      Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
@@ -35,7 +36,8 @@ namespace VendorOrderTracker.Tests
       string description =
       "10 pastries";
       int price = 17;
-      Order newOrder= new Order(title, description, price);
+      date date = 5/10/2021;
+      Order newOrder= new Order(title, description, price, date);
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
     }
@@ -48,9 +50,24 @@ namespace VendorOrderTracker.Tests
       string description =
       "10 pastries";
       int price = 17;
-      Order newOrder= new Order(title, description, price);
+      date date = 5/10/2021;
+      Order newOrder= new Order(title, description, price, date);
       int result = newOrder.Price;
       Assert.AreEqual(price, result);
+    }
+
+    [TestMethod]
+    public void
+    GetDate_ReturnsDate_Date()
+    {
+      string title = "CRI Regular";
+      string description =
+      "10 pastries";
+      int price = 17;
+      date date = 5/10/2021;
+      Order newOrder= new Order(title, description, price, date);
+      int result = newOrder.Date;
+      Assert.AreEqual(date, result);
     }
   }
 }
