@@ -22,7 +22,7 @@ namespace VendorOrderTracker.Tests
       string description =
       "10 pastries";
       int price = 17;
-      Order newOrder = new Order(title, description);
+      Order newOrder = new Order(title, description, price);
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
@@ -35,7 +35,7 @@ namespace VendorOrderTracker.Tests
       string description =
       "10 pastries";
       int price = 17;
-      Order newOrder= new Order(title, description);
+      Order newOrder= new Order(title, description, price);
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
     }
@@ -49,7 +49,7 @@ namespace VendorOrderTracker.Tests
       "10 pastries";
       int price = 17;
       Order newOrder= new Order(title, description, price);
-      string result = newOrder.Price;
+      int result = newOrder.Price;
       Assert.AreEqual(price, result);
     }
   }
